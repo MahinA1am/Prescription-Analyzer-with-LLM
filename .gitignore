@@ -1,0 +1,29 @@
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+env/
+venv/
+*.sqlite3
+
+# ---------- IDEs / Editors ----------
+.vscode/
+.idea/
+*.iml
+*.sublime-project
+*.sublime-workspace
+
+# ---------- OS ----------
+.DS_Store
+Thumbs.db
+
+# ---------- Logs ----------
+*.log
+
+# ---------- Environment / Sensitive ----------
+.env
+.env.*
+*.env
+
+# ---------- Python virtual environment for VS Code ----------
+.vscode/settings.json

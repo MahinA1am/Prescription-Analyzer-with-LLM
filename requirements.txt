@@ -1,0 +1,6 @@
+flask
+easyocr
+transformers
+torch
+pillow
+numpy

@@ -1,0 +1,125 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background: #f9fafc; color: #333; }
+
+/* HEADER */
+.header {
+  display: flex; justify-content: space-between; align-items: center;
+  background: #eaf6ff; color: #222; padding: 12px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.logo { font-size: 24px; font-weight: bold; color: #0077cc; }
+.logo span { color: #00aaff; }
+.search-bar { flex: 1; margin: 0 20px; display: flex; }
+.search-bar input { flex: 1; padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+.search-btn {
+  padding: 8px 12px; margin-left: 5px;
+  background: #00aaff; border: none; border-radius: 4px;
+  color: white; cursor: pointer;
+}
+.menu a { color: #333; margin-left: 15px; text-decoration: none; font-weight: 500; }
+
+/* SLIDESHOW */
+.slideshow { position: relative; height: 250px; background: #eef7ff; margin: 20px; overflow: hidden; border-radius: 10px; }
+.slides { display: none; text-align: center; padding: 60px; }
+.slides h2 { font-size: 28px; color: #0077cc; margin-bottom: 10px; }
+.slides p { font-size: 16px; }
+.fade { animation: fadeEffect 1.5s; }
+@keyframes fadeEffect { from {opacity: .4} to {opacity: 1} }
+
+.dots { text-align: center; position: absolute; bottom: 10px; width: 100%; }
+.dot { height: 12px; width: 12px; margin: 0 3px; background: #bbb; border-radius: 50%; display: inline-block; cursor: pointer; }
+.active { background: #00aaff; }
+
+/* LAYOUT */
+.container { display: flex; margin: 20px; }
+.sidebar {
+  width: 220px; background: #fff; padding: 15px;
+  border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+.sidebar h3 { margin-bottom: 10px; color: #0077cc; }
+.sidebar ul li { margin: 8px 0; cursor: pointer; }
+
+.content { flex: 1; margin-left: 20px; }
+.upload-section, .results {
+  background: #fff; padding: 20px; margin-bottom: 20px;
+  border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+.upload-btn {
+  display: inline-block; padding: 10px 15px;
+  background: #00aaff; color: white; border-radius: 5px;
+  cursor: pointer; margin-top: 10px;
+}
+.box {
+  background: #fafafa; border: 1px solid #eee; padding: 12px;
+  border-radius: 6px; white-space: pre-wrap; margin-top: 10px;
+}
+button { padding: 8px 12px; border: none; border-radius: 4px; background: #00aaff; color: white; cursor: pointer; }
+button:hover { background: #0088dd; }
+
+/* FOOTER */
+.footer {
+  display: flex; justify-content: space-around; padding: 20px;
+  background: #eaf6ff; color: #222; margin-top: 30px;
+  border-top: 1px solid #ddd;
+}
+.footer h3, .footer h4 { color: #0077cc; margin-bottom: 10px; }
+
+/* ---------- Box Container ---------- */
+.box {
+  background: #fff;
+  border: 1px solid #e3e6ea;
+  border-radius: 8px;
+  padding: 10px 12px;       /* Less padding */
+  margin-top: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  white-space: normal;
+}
+
+/* ---------- Medicine Details Cards (Clean + Compact) ---------- */
+.medicine-detail {
+  background: #fdfdfd;
+  border-left: 4px solid #1a73e8;
+  border-radius: 6px;
+  padding: 6px 10px;
+  margin-bottom: 6px;
+  line-height: 1.35;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  transition: box-shadow 0.2s ease;
+}
+
+.medicine-detail:hover {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.medicine-detail h4 {
+  margin: 0 0 3px 0;
+  color: #1a73e8;
+  font-size: 16.5px;
+  font-weight: 600;
+}
+
+.medicine-detail p {
+  margin: 1px 0;
+  font-size: 14px;
+  color: #222;
+}
+
+.medicine-detail p b {
+  color: #000;
+  font-weight: 600;
+}
+
+.medicine-detail hr {
+  border: 0;
+  border-top: 1px solid #e9e9e9;
+  margin: 4px 0;
+}
+
+/* Remove top gap when first card appears */
+#retrieved {
+  padding-top: 0 !important;
+}
+
+#retrieved .medicine-detail:first-child {
+  margin-top: 0;
+}
